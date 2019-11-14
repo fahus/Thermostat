@@ -22,6 +22,7 @@ function Thermostat() {
       return;
     }
     this.temperature += 1;
+    return this.temperature
   };
 
   Thermostat.prototype.down = function () {
@@ -29,6 +30,7 @@ function Thermostat() {
       return;
     }
     this.temperature -= 1;
+    return this.temperature
   };
 
   Thermostat.prototype.powerSavingModeOn = function () {
