@@ -43,5 +43,9 @@ function Thermostat() {
     return false
   };
 
+  Thermostat.prototype.resetTemperature = function () {
+    this.temperature = 20;
+    return this.temperature
+  };
 
 };

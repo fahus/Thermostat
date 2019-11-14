@@ -31,30 +31,36 @@ describe ('Thermostat', function() {
       expect(thermostat.getCurrentTemperature()).toEqual(10);
     });
 
-  });
-
-  describe('power save mode', function() {
-
-    it('Power save mode on has a maximum tempature of 25 degrees', function(){
-      thermostat.powerSavingModeOn()
-      for (var i = 0; i < 6; i++){
-        thermostat.up();
-      }
-      expect(thermostat.getCurrentTemperature()).toEqual(25)
-    });
-
-    it('Power save mode off has a maximum tempature of 32 degrees', function(){
-      thermostat.powerSavingModeOff()
-      for (var i = 0; i < 13; i++){
-        thermostat.up();
-      }
-      expect(thermostat.getCurrentTemperature()).toEqual(32)
-    });
-
-    it('Power saving mode is on by default', function(){
-      expect(thermostat.powerSavingModeOn()).toEqual(true);
+    it('reset temperature to 20 degrees with a reset', function(){
+      thermostat.up();
+      thermostat.resetTemperature();
+      expect(thermostat.getCurrentTemperature()).toEqual(20);
     });
 
   });
 
-});
+    describe('power save mode', function() {
+
+      it('Power save mode on has a maximum tempature of 25 degrees', function(){
+        thermostat.powerSavingModeOn()
+        for (var i = 0; i < 6; i++){
+          thermostat.up();
+        }
+        expect(thermostat.getCurrentTemperature()).toEqual(25)
+      });
+
+      it('Power save mode off has a maximum tempature of 32 degrees', function(){
+        thermostat.powerSavingModeOff()
+        for (var i = 0; i < 13; i++){
+          thermostat.up();
+        }
+        expect(thermostat.getCurrentTemperature()).toEqual(32)
+      });
+
+      it('Power saving mode is on by default', function(){
+        expect(thermostat.powerSavingModeOn()).toEqual(true);
+      });
+
+    });
+
+  });
