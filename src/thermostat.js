@@ -54,7 +54,7 @@ function Thermostat() {
     } else if (this.temperature < 25 && this.temperature > 18) {
       return 'medium-usage'
     } else if (this.temperature > 25) {
-      return 'hi-usage'
+      return 'high-usage'
     }
   };
 
