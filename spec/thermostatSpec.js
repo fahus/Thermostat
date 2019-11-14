@@ -8,29 +8,53 @@ describe ('Thermostat', function() {
     thermostat = new Thermostat();
   });
 
-  it ('starts at 20 degrees', function(){
-    expect(thermostat.getCurrentTemperature()).toEqual(20);
-  });
+  describe('temperature', function() {
 
-  it('increases in temperature with up()',function(){
-    thermostat.up();
-    expect(thermostat.getCurrentTemperature()).toEqual(21);
-  });
+    it ('starts at 20 degrees', function(){
+      expect(thermostat.getCurrentTemperature()).toEqual(20);
+    });
 
-  it('decreases in temperature with down()', function(){
-    thermostat.down();
-    expect(thermostat.getCurrentTemperature()).toEqual(19);
-  });
+    it('increases in temperature with up()',function(){
+      thermostat.up();
+      expect(thermostat.getCurrentTemperature()).toEqual(21);
+    });
 
-  it('has a minimum temperature of 10 degrees', function(){
-    for (var i = 0; i < 11; i++){
+    it('decreases in temperature with down()', function(){
       thermostat.down();
-    }
-    expect(thermostat.getCurrentTemperature()).toEqual(10);
+      expect(thermostat.getCurrentTemperature()).toEqual(19);
+    });
+
+    it('has a minimum temperature of 10 degrees', function(){
+      for (var i = 0; i < 11; i++){
+        thermostat.down();
+      }
+      expect(thermostat.getCurrentTemperature()).toEqual(10);
+    });
+
   });
 
-  it('Power saving mode is on by default', function(){
-    expect(thermostat.isPowerSavingModeOn()).toEqual(true);
+  describe('power save mode', function() {
+
+    it('Power save mode on has a maximum tempature of 25 degrees', function(){
+      thermostat.powerSavingModeOn()
+      for (var i = 0; i < 6; i++){
+        thermostat.up();
+      }
+      expect(thermostat.getCurrentTemperature()).toEqual(25)
+    });
+
+    it('Power save mode off has a maximum tempature of 32 degrees', function(){
+      thermostat.powerSavingModeOff()
+      for (var i = 0; i < 13; i++){
+        thermostat.up();
+      }
+      expect(thermostat.getCurrentTemperature()).toEqual(32)
+    });
+
+    it('Power saving mode is on by default', function(){
+      expect(thermostat.powerSavingModeOn()).toEqual(true);
+    });
+
   });
 
 });
