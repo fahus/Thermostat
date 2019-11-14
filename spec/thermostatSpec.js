@@ -39,7 +39,7 @@ describe ('Thermostat', function() {
 
   });
 
-    describe('power save mode', function() {
+    describe('power save mode', function(){
 
       it('Power save mode on has a maximum tempature of 25 degrees', function(){
         thermostat.powerSavingModeOn()
@@ -59,6 +59,29 @@ describe ('Thermostat', function() {
 
       it('Power saving mode is on by default', function(){
         expect(thermostat.powerSavingModeOn()).toEqual(true);
+      });
+
+    });
+
+    describe('energy usage', function(){
+
+      it('returns low usage when < 18', function(){
+        for (var i = 0; i < 3; i++){
+          thermostat.down();
+        }
+        expect(thermostat.usage()).toEqual('low-usage')
+      });
+
+      it('returns medium usage when < 25', function(){
+        expect(thermostat.usage()).toEqual('medium-usage')
+      });
+
+      it('returns hi usage when > 25', function(){
+        thermostat.powerSavingModeOff();
+        for (var i = 0; i < 6; i++){
+          thermostat.up();
+        }
+        expect(thermostat.usage()).toEqual('hi-usage')
       });
 
     });

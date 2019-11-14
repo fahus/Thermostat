@@ -48,4 +48,14 @@ function Thermostat() {
     return this.temperature
   };
 
+  Thermostat.prototype.usage = function () {
+    if (this.temperature < 18) {
+      return 'low-usage'
+    } else if (this.temperature < 25 && this.temperature > 18) {
+      return 'medium-usage'
+    } else if (this.temperature > 25) {
+      return 'hi-usage'
+    }
+  };
+
 };
