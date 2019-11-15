@@ -1,0 +1,34 @@
+section {
+  width: 25%;
+  border-radius: 10px;
+  background-color: #ffccd9;
+  box-shadow: 8px 16px #ff8080;
+  display: inline-block;
+}
+
+
+body {
+  text-align: center;
+}
+
+#temperature {
+  background-color: #ffffff;
+  border: 2px solid #ff8080;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  padding: 5px;
+}
+
+button {
+  background-color: #ffffff;
+  font-size: 16px;
+  color: #ff8080;
+  border-radius: 10px;
+  margin: 2px
+}
+
+h1 {
+  color: #ff8080;
+}
