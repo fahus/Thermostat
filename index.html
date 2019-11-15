@@ -4,22 +4,26 @@
   <title>Thermostat</title>
 </head>
 <body>
-  <section>
+  <section><center>
+    <h1>~~ Thermostat ~~</h1>
+    <h2>temperature:</h2>
     <h1 id="temperature"></h1>
+    <h2>degrees</h2>
     <p>
-      <button id="temperature up">+</button>
-      <button id="temperature down">-</button>
-      <button id="temperature reset">reset</button>
+      <button id="temperature-up">+</button>
+      <button id="temperature-down">-</button>
+      <button id="temperature-reset">reset</button>
       power saving mode is <span id="power-saving-status">on</span>
       <button id="powersaving-on">PSM on </button>
       <button id="powersaving-off">PSM off</button>
     </p>
-  </section>
+  </center></section>
   <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   <script src="src/thermostat.js"></script>
   <script src="interface.js"></script>
+  <link href="styleSheet.css" rel="stylesheet">
 </body>
 </html>

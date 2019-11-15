@@ -1,61 +1,55 @@
 'use strict';
 
 function Thermostat() {
-  this.MINIMUM_TEMPERATURE = 10;
   this.temperature = 20;
-  this.maxmimumTemperature = 25;
+  this.MIN_TEMP = 10;
+  this.maxTemp = 25;
+};
 
+Thermostat.prototype.isMinTemp = function() {
+  return this.temperature === this.MIN_TEMP;
+};
+Thermostat.prototype.isMaxTemp = function () {
+  return this.temperature === this.maxTemp;
+};
 
-  Thermostat.prototype.isMinimumTemperature = function () {
-    return this.temperature === this.MINIMUM_TEMPERATURE;
-  };
-  Thermostat.prototype.isMaximumTemperature = function () {
-    return this.temperature === this.maxmimumTemperature;
-  };
+Thermostat.prototype.currentTemp = function() {
+  return this.temperature
+};
+Thermostat.prototype.increaseTemp = function() {
+  if (this.isMaxTemp()) {
+    return;
+  }
+  this.temperature += 1;
+  return this.temperature
+};
+Thermostat.prototype.decreaseTemp = function() {
+  if (this.isMinTemp()) {
+    return;
+  }
+  this.temperature -= 1;
+  return this.temperature
+};
+Thermostat.prototype.resetTemp = function () {
+  this.temperature = 20;
+  return this.temperature
+};
 
-  Thermostat.prototype.getCurrentTemperature = function () {
-    return this.temperature;
-  };
+Thermostat.prototype.powerSavingModeOn = function () {
+  this.maxTemp = 25;
+  return true
+};
+Thermostat.prototype.powerSavingModeOff = function () {
+  this.maxTemp = 32;
+  return false
+};
 
-  Thermostat.prototype.up = function () {
-    if (this.isMaximumTemperature()) {
-      return;
-    }
-    this.temperature += 1;
-    return this.temperature
-  };
-
-  Thermostat.prototype.down = function () {
-    if (this.isMinimumTemperature()) {
-      return;
-    }
-    this.temperature -= 1;
-    return this.temperature
-  };
-
-  Thermostat.prototype.powerSavingModeOn = function () {
-    this.maxmimumTemperature = 25;
-    return true
-  };
-
-  Thermostat.prototype.powerSavingModeOff = function () {
-    this.maxmimumTemperature = 32;
-    return false
-  };
-
-  Thermostat.prototype.resetTemperature = function () {
-    this.temperature = 20;
-    return this.temperature
-  };
-
-  Thermostat.prototype.usage = function () {
-    if (this.temperature < 18) {
-      return 'low-usage'
-    } else if (this.temperature < 25 && this.temperature > 18) {
-      return 'medium-usage'
-    } else if (this.temperature > 25) {
-      return 'high-usage'
-    }
-  };
-
+Thermostat.prototype.energyUsage = function () {
+  if (this.temperature < 18) {
+    return 'low-usage'
+  } else if (this.temperature < 25 && this.temperature > 18) {
+    return 'medium-usage'
+  } else if (this.temperature > 25) {
+    return 'high-usage'
+  }
 };
