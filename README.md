@@ -51,3 +51,5 @@ The thermostat also uses a weather API to check the weather of your current loca
 * Clone this repo
 * From the command line, type 'open SpecRunner.html'
 * All unit tests pass
+
+![Jasmine](/Users/fayhussein/Thermostat.js/Jasmine.png)
