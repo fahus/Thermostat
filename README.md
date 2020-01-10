@@ -33,3 +33,21 @@ The thermostat also uses a weather API to check the weather of your current loca
 * How to encapsulate behaviour in Javascript
 * Introduced to Ajax and jQuery
 * How to test and debug in multiple languages
+
+## Testing
+
+### Feature Test
+
+* Copy the code in the 'thermostat.js' file and paste this into your console on Chrome Dev Tools.
+* Create a new thermostat object by typing thermostat = new Thermostat();
+* You can increase the temperature by typing `thermostat.up();` and decrease it by typing `thermostat.down();`
+* To toggle the power saving mode on or off, type `thermostat.switchPSM();`
+* To check your energy usage, type `thermostat.energyUsage();`
+* To check the current temperature, type `thermostat.temp();`
+* To reset the temperature, type `thermostat.reset();`
+
+### Unit Test
+
+* Clone this repo
+* From the command line, type 'open SpecRunner.html'
+* All unit tests pass
