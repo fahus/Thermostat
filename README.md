@@ -1,4 +1,5 @@
-# Thermostat in Javascript
+# Thermostat :thermometer:
+
 
 ## Customer requirements:
 
