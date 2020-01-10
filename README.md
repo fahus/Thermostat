@@ -36,7 +36,7 @@ The thermostat also uses a weather API to check the weather of your current loca
 
 ## Testing
 
-### Feature Test
+### Feature Testing
 
 * Copy the code in the 'thermostat.js' file and paste this into your console on Chrome Dev Tools.
 * Create a new thermostat object by typing thermostat = new Thermostat();
@@ -46,10 +46,10 @@ The thermostat also uses a weather API to check the weather of your current loca
 * To check the current temperature, type `thermostat.temp();`
 * To reset the temperature, type `thermostat.reset();`
 
-### Unit Test
+### Unit Testing
 
 * Clone this repo
 * From the command line, type 'open SpecRunner.html'
 * All unit tests pass
 
-![Jasmine](/Users/fayhussein/Thermostat.js/Jasmine.png)
+![image](https://user-images.githubusercontent.com/52044764/72189629-3f496480-33f5-11ea-9147-ce45d82b5b03.png)
