@@ -1,9 +1,9 @@
 section {
-  width: 25%;
-  border-radius: 10px;
-  background-color: #ffccd9;
-  box-shadow: 8px 16px #ff8080;
+  width: 600px;
+  border-radius: 8px;
+  background-color: #757575;
   display: inline-block;
+
 }
 
 
@@ -13,7 +13,8 @@ body {
 
 #temperature {
   background-color: #ffffff;
-  border: 2px solid #ff8080;
+  color: #2D2D2D ;
+  border: 2px solid #ADA3A3;
   width: 50%;
   border-radius: 10px;
   text-align: center;
@@ -21,18 +22,31 @@ body {
   padding: 5px;
 }
 
+
+
+
+
 button {
   background-color: #ffffff;
+  color: #2D2D2D ;
+  font-family: Helvetica;
   font-size: 16px;
-  color: #ff8080;
   border-radius: 10px;
   margin: 2px
 }
 
+
+
+
+
+
+
 h1 {
-  color: #ff8080;
+  font-family: Helvetica;
+  color: #ffffff;
 }
 
 h2 {
-    color: #ff8080;
+    font-family: Helvetica;
+    color: #ffffff;
 }

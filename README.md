@@ -25,6 +25,11 @@ The thermostat also uses a weather API to check the weather of your current loca
 * If power-saving mode is on, you won't be able to increase the temperature higher than 25 degrees. If you turn it off, you can increase up to 32. Turning power save mode off, increasing the temperature and then turning power save mode back on will change the maximum back to 25 again.
 
 
+## Demo
+
+![demo](https://media.giphy.com/media/hubce65hwykDdkw6Bq/giphy.gif)
+
+
 ## What I learned from this project
 
 * How to test drive a simple front-end web app with Javascript
