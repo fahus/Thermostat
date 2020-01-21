@@ -14,7 +14,7 @@ The thermostat also uses a weather API to check the weather of your current loca
 * If power saving mode is off, the maximum temperature is 32 degrees
 * Power saving mode is on by default
 * You can reset the temperature to 20 with a reset function
-* You can ask about the thermostat's current energy usage: < 18 is low-usage, < 25 is medium-usage, anything else is high-usage.green, `medium-usage` indicated with black, `high-usage` indicated with red.)
+* You can ask about the thermostat's current energy usage: < 18 is `low-usage`, < 25 is `medium-usage`, anything else is `high-usage`.
 
 
 ## Using this program
