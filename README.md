@@ -1,6 +1,6 @@
 # Thermostat :thermometer:
 
-A Makers Academy Week 5 challenge, to help us to learn a brand new language, Javascript. The challenge was to test drive a front-end web app using Javascript, with the client specifications below.
+Makers Academy Week 5 challenge, to help us to learn a brand new language, Javascript. The challenge was to test drive a front-end web app using Javascript, with the client specifications below.
 
 The thermostat also uses a weather API to check the weather of your current location, so that you can adjust your thermostat accordingly.
 
